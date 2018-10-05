@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bases de datos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/menu/css/scroll-down.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="public/menu/images/favicon.png"/>
+    <link href="https://fastcdn.org/Animate.css/3.4.0/animate.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+    <script src="public/menu/js/main.js"></script>
+    <script src="public/menu/js/searchbar.js"></script>
+</head>
+
+<body>
+    <!-- SECCION 1 -->
+    <section class="company-heading intro-type bg-1" id="parallax-one">
+        <div class="container">
+            <div class="row product-title-info">
+                <div class="col-md-12">
+                    <h1 class="animated fadeIn">
+               			UNIVERSIDAD XYZ
+	            	</h1>
+                    <h3 class="animated fadeIn">
+	            		Bases de datos académicas para la comunidad univesitaria
+	            	</h3>
+                    <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2">
+                    	<img class="animated rubberBand" alt="Arrow Down Icon" src="public/menu/images/arrow-down-1.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="parallax" id="parallax-cta"></div>
+    </section>
+    <div class="divider"></div>
+    <!-- JUMBOTRON -->
+    <div class="container-fluid" id="section2">
+        <div class="jumbotron">
+            <h1 class="text-center">CATÁLOGO DE BASES DE DATOS</h1>
+        </div>
+        <div class="searchbar-container left-addon">
+            <i class="fa fa-search"></i>
+            <input type="text" id="searchInput" onkeyup="search_db()" placeholder="Buscar bases de datos o términos" title="Ingrese términos">
+        </div>
+    </div>
+    <!-- SECCION 2 -->
+    <div class="main">
+        <section id="section3">
+            <!-- CONTENEDOR DE LAS BASES DE DATOS -->
+            <div class="container-fluid">
+                <!-- BARRA DE BUSQUEDA -->
+                <div class="divider"></div>
+                <div class="row" id="dbsTable">
+                    <!-- INICIO DE BASES DE DATOS -->
+                    <!-- FOR PRODUCTION --
+                    ^B
+                    <script>
+                    	var base_url = 'https://intelproxy.com/ezproxy-menu-imgs/';
+	                    var title = '^T';
+	                    var format = '.jpg';
+	                    title = title.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+	                    title = title.toLowerCase();
+	                    var urlpath = base_url.concat(title,format);
+
+                    	var div_col = document.createElement("div");
+                    	div_col.className = "col-lg-2 col-md-4 col-sm-6 col-xs-12 cart";
+                    	document.getElementById("dbsTable").appendChild(div_col);
+
+                    	var div_hover = document.createElement("div");
+                    	div_hover.className = "hovereffect";
+                    	div_col.appendChild(div_hover);
+
+	                    var logo = document.createElement("img");
+	                    logo.className = "img-responsive";
+	                    logo.src = urlpath;
+	                    logo.alt = title;
+	                    div_hover.appendChild(logo);
+
+	                    var overlay = document.createElement("div");
+	                    overlay.className = "overlay";
+	                    div_hover.appendChild(overlay);
+
+	                    var title_header = document.createElement("h2");
+	                    title_header.innerHTML = title;
+	                    overlay.appendChild(title_header);
+
+	                    var description = document.createElement("a");
+	                    description.className = "info";
+	                    description.href = "^L?url=^V";
+	                    description.target = "_blank"
+	                    description.innerHTML = "^D"
+						overlay.appendChild(description);
+	                </script>
+                    ^E 
+                    -->
+                    
+                    <!-- FOR TESTING -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 cart">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="https://www.intelproxy.com/ezproxy-menu-imgs/worldcat.org.jpg" alt="">
+                            <div class="overlay">
+                                <h2>WORLDCAT.ORG</h2>
+                                <a class="info" href="#" target="_blank">Catálago Mundial en español, es un catálogo en línea considerado el mayor catálogo en línea del mundo. WorldCat está disponible en muchas bibliotecas y redes informáticas de universidades</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 cart">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="https://www.intelproxy.com/ezproxy-menu-imgs/scielo.jpg" alt="">
+                            <div class="overlay">
+                                <h2>SCIELO</h2>
+                                <a class="info" href="#" target="_blank">Es un proyecto de biblioteca electrónica. Permite la publicación electrónica de ediciones completas de las revistas científicas.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 cart">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="https://www.intelproxy.com/ezproxy-menu-imgs/pubmed.jpg" alt="">
+                            <div class="overlay">
+                                <h2>PUBMED</h2>
+                                <a class="info" href="#" target="_blank">Es un motor de búsqueda de libre acceso a la base de datos MEDLINE de citaciones y resúmenes de artículos de investigación biomédica.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 cart">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="https://www.intelproxy.com/ezproxy-menu-imgs/biblioteca virtual en salud.jpg" alt="">
+                            <div class="overlay">
+                                <h2>BIBLIOTECA VIRTUAL EN SALUD</h2>
+                                <a class="info" href="#" target="_blank">Base de datos, sobre legislación básica del sector salud y desarrollo de políticas en salud en América Latina.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 cart">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="https://www.intelproxy.com/ezproxy-menu-imgs/psicodoc.jpg" alt="">
+                            <div class="overlay">
+                                <h2>PSICODOC</h2>
+                                <a class="info" href="#" target="_blank">Base de datos, sobre legislación básica del sector salud y desarrollo de políticas en salud en América Latina.
+                                    Base de datos, sobre legislación básica del sector salud y desarrollo de políticas en salud en América Latina.
+                                    Base de datos, sobre legislación básica del sector salud y desarrollo de políticas en salud en América Latina.
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        </div>
+        <!-- CERRAR SESIÓN -->
+        <a href="/logout" class="float">
+			<i class="fa fa-power-off my-float"></i>
+		</a>
+</body>
+
+</html>

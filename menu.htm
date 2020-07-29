@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="public/menu/images/favicon/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Recursos ezproxy referencistas"
+    />
+    <title>Menú</title>
+    <link rel="stylesheet" href="public/menu/css/style.css" />
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="public/menu/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/menu/dist/css/stylish-portfolio.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+      <!-- Bootstrap core JavaScript -->
+    <script src="public/menu/dist/js/jquery.min.js"></script>
+    <script src="public/menu/dist/js/popper.min.js"></script>
+    <script src="public/menu/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/menu/dist/js/stylish-portfolio.min.js"></script>
+    <script type="application/json" src="public/menu/data/data.json"></script>
+    <script type="application/javascript" src="public/menu/data/db-metadata.js"></script>
+    <script type="application/javascript" src="public/menu/js/functions.js"></script>
+    <script type="application/javascript" src="public/menu/js/searchbar.js"></script>
+    
+</head>
+<body>
+    
+    <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="container text-center my-auto" id="contentHeader">
+    </div>
+    <div class="overlay"></div>
+  </header>
+  <section class="services" id="catalogo">
+    <h1>Catálogo de Bases de Datos</h1>
+  </section>
+  <!-- Search -->
+ <div class="container-fluid input-group">
+      <input class="form-control py-2 border-right-0 border-search" onkeyup="searchData()" type="text" placeholder="Recurso o termino que buscará..." id="myInput">
+      <span class="input-group-append">
+          <div class="input-group-text bg-transparent" id="boton"><i class="fa fa-search"></i></div>
+      </span>
+  </div>
+
+  <section id="section3">
+      <!-- CONTENEDOR DE LAS BASES DE DATOS -->
+      <div class="container-fluid"> 
+        <!-- CATEGORIAS -->
+        <ul class="nav nav-tabs mb-4" role="tablist">
+            <li class="nav-item direction">
+                <a class="nav-link" id="button-az">
+                  <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav-item" data-placement="top" data-toggle="tooltip" title="Orden de Configuración">
+                <a class="nav-link" id="button-sort">
+                  <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="row no-gutters" id="dbsTable">
+            <!-- INICIO DE BASES DE DATOS -->
+            ^B
+                <script>
+                  var base_url = 'https://intelproxy.com/ezproxy-menu-imgs/';
+                  var title = '^T';
+                  var format = '.jpg';
+                  title = title.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+                  title = title.toLowerCase();
+                  var urlpath = base_url.concat(title,format);
+
+                  var div_col = document.createElement("div");
+                  div_col.className = "col-xl-3 col-lg-4 col-md-6 col-12 cart";
+                  document.getElementById("dbsTable").appendChild(div_col);
+
+                  var aItem = document.createElement('a');
+                  aItem.className = "portfolio-item";
+                  aItem.id = "recurso";
+                  aItem.target = "_blank";
+                  aItem.href = "^L?url=^V";
+
+                  var Caption = document.createElement('span');
+                  Caption.className = "caption";
+
+                  var CaptionContent = document.createElement('span');
+                  CaptionContent.className = "caption-content";
+
+                  var tituloItem = document.createElement('h2');
+                  tituloItem.id = "tituloItem";
+                  tituloItem.textContent = title;
+
+                  var descripcionItem = document.createElement('p');
+                  descripcionItem.id = "descripcionItem";
+                  descripcionItem.textContent = "^D";
+                  //console.log(descripcionItem);
+
+                  CaptionContent.appendChild(tituloItem);
+                  CaptionContent.appendChild(descripcionItem);
+
+                  Caption.appendChild(CaptionContent);
+
+                  var imageItem = document.createElement('img');
+                  imageItem.className = "img-fluid imageItem";
+                  imageItem.alt = title;
+                  imageItem.src = urlpath;
+                  //console.log(imageItem);
+
+                  aItem.appendChild(Caption);
+                  aItem.appendChild(imageItem);
+
+                  div_col.appendChild(aItem);
+
+                </script>
+            ^E
+        </div>
+      </div>
+  </section>
+
+  <a href="/logout" class="float">
+      <i class="fa fa-power-off logout"></i>
+  </a>
+
+</body>
+</html>

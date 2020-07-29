@@ -1,9 +1,8 @@
 {
-
 	"uData": {
 		"name": "Universidad XYZ",
 		"description": "Bases de datos académicas para la Comunidad Institucional",
 		"background": "public/menu/images/background.jpg",
-		"colorIcon": "white",
+		"colorIcon": "white"
 	}
 }

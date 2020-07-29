@@ -1,0 +1,313 @@
+html {
+    scroll-behavior: smooth;
+  }
+/* INICIO ESTILOS HEADER */
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+   }
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.masthead {
+    background: "";
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 30rem !important;
+    position: relative !important;
+    display: table !important;
+    width: 100% !important;
+    height: 100vh !important;
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+}
+#contentHeader {
+  z-index: 1000;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*background: rgba(0, 0, 0, 0.6);*/
+}
+.title {
+    margin: 0;
+    font-size: 3rem;
+    color: white;
+}
+.description {
+    font-weight: 400; 
+    font-size: 1.2rem; 
+    color: white !important; 
+    padding: 20px;
+}
+header a {
+    text-decoration: none;
+    display: inline-block;
+}
+.enlaceIcon {
+    border: solid;
+    border-radius: 100%;
+    padding: 5px 10px;
+    color: black;
+    font-size: 30px !important;
+}
+.enlaceIcon:hover {
+    cursor: pointer;
+    color: #113475 !important;
+}
+
+/* FIN ESTILOS HEADER */
+
+/* INICIO SECTION SERVICES */
+.services {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+h2 {
+    margin: 0 auto;
+    color: #000;
+    font-weight: 400;
+    font-size: 2rem;
+}
+  
+/* FIN SECTION SERVICES */
+
+
+/*SEARCH*/
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.border-search, .input-group-text {
+    border: 1px solid #113475 !important;
+}
+
+/* INICIO ESTILO PORTAFOLIO ITEMS */
+
+.portfolio-item .caption .caption-content h2 {
+    margin-top: 0 !important;
+    font-size: 1rem !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+.portfolio-item .caption .caption-content p {
+    font-weight: 400 !important;
+    font-size: 0.9rem !important;
+    text-align: center;
+    margin: 0 0.5rem 0.5rem;
+}
+.content-section {
+    padding-top: 3rem !important;
+    padding-bottom: 7.5rem !important;
+}
+/* los comentados estan el es css original */
+.portfolio-item {
+   /* display: flex;
+    height: 100%;
+    width: 100%;
+    */
+    margin: 0.2rem !important;
+}
+.portfolio-item .caption {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+   /* position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    */
+}
+.portfolio-item .caption .caption-content {
+    text-align: center;
+    color: #fff !important;
+    margin: auto !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .portfolio-item .caption {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+   }
+    .portfolio-item .caption .caption-content p {
+        margin: 0 2rem 1rem;
+   }
+   .imageItem {
+    width: 100% !important;
+    height: auto !important;
+    }
+}
+@media (min-width: 992px) {
+    .title {
+      font-size: 4rem;
+    }
+    .description {
+      font-size: 1.75rem;
+    }
+    .portfolio-item {
+        max-width: none;
+        margin: 0;
+   }
+    .portfolio-item .caption {
+        transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+        -webkit-clip-path: inset(0);
+        clip-path: inset(0);
+   }
+    .portfolio-item .caption .caption-content {
+        transition: opacity 0.25s;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+   }
+    .portfolio-item .caption .caption-content h2 {
+        margin-top: 1rem;
+   }
+    .portfolio-item .caption .caption-content p {
+        margin: 0 1.5rem 1rem;
+   }
+    .portfolio-item img {
+        transition: -webkit-clip-path 0.25s ease-out;
+        -webkit-clip-path: inset(-1px);
+        clip-path: inset(-1px);
+   }
+    .portfolio-item:hover img {
+        -webkit-clip-path: inset(0.6rem) !important;
+        clip-path: inset(0.6rem) !important;
+   }
+    .portfolio-item:hover .caption {
+        background-color: rgba(17, 52, 117, 0.902) !important;
+        -webkit-clip-path: inset(0.6rem) !important;
+        clip-path: inset(0.6rem) !important;
+   }
+   .imageItem {
+    width: 100% !important;
+    height: auto !important;
+    }
+}
+
+/* FIN ESTILO PORTAFOLIO ITEMS */
+
+/* ESTILO TABS */
+
+div#tabs-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.direction {
+    margin-left: auto;
+}
+
+/* ESTILO TABS */
+.nav-link {
+    color: #000 !important;
+  }
+  .nav-link:hover {
+    color: #fff !important;
+    background-color: #113475 !important;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff !important;
+    background-color: #113475 !important;
+  }
+  .nav-tabs {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(17, 52, 117, 0.6) !important;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: rgba(17, 52, 117, 0.6) rgba(17, 52, 117, 0.6) #fff !important;
+  }
+  .dropdown-menu {
+    padding: 0 !important;
+    color: #000 !important;
+    background-color: #fff !important;
+    border: 1px solid rgba(17, 52, 117, 0.6) !important;
+    min-width: 100% !important;
+  }
+  .dropdown-item {
+    color: #000 !important;
+    padding: 0.35rem 1.5rem !important;
+    border-radius: 0.25rem !important;
+  }
+  .dropdown-item:hover {
+    color: #fff !important;
+    background-color: #113475 !important;
+  }
+  .dropdown-item.active, .dropdown-item:active {
+    color: #fff !important;
+    background-color: #113475 !important;
+    border-radius: 0.25rem !important;
+  }
+  
+/*LOGOUT*/
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #fa4251;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+}
+.float:hover {
+    box-shadow: 2px 2px 3px #999999;
+}
+.logout {
+    margin-top: 22px;
+}
+
+li.nav-item.ml-auto {
+    display: none;
+}
+
+
+/*ANTIGUO CSS*/
+
+.col-xl-3.col-lg-4.col-md-6.col-12.cart {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 1px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.divider {
+    height: 50px;
+}
+
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#fa4251;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
+.tab-content>.active {
+    display: flex !important;
+}

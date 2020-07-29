@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="public/menu/images/favicon/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Recursos ezproxy referencistas"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="public/menu/css/style.css" />
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="public/menu/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/menu/dist/css/stylish-portfolio.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+      <!-- Bootstrap core JavaScript -->
+    <script src="public/menu/dist/js/jquery.min.js"></script>
+    <script src="public/menu/dist/js/popper.min.js"></script>
+    <script src="public/menu/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/menu/dist/js/stylish-portfolio.min.js"></script>
+    <script type="application/json" src="public/menu/data/data.json"></script>
+    <script type="application/javascript" src="public/menu/data/db-metadata.js"></script>
+    <script type="application/javascript" src="public/menu/js/functions.js"></script>
+    <script type="application/javascript" src="public/menu/js/searchbar.js"></script>
+    
+</head>
+<body>
+    
+    <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="container text-center my-auto" id="contentHeader">
+    </div>
+    <div class="overlay"></div>
+  </header>
+  <section class="services" id="catalogo">
+    <h1>Catálogo de Bases de Datos</h1>
+  </section>
+  <!-- Search -->
+ <div class="container-fluid input-group">
+      <input class="form-control py-2 border-right-0 border-search" onkeyup="searchData()" type="text" placeholder="Recurso o termino que buscará..." id="myInput">
+      <span class="input-group-append">
+          <div class="input-group-text bg-transparent" id="boton"><i class="fa fa-search"></i></div>
+      </span>
+  </div>
+
+  <section id="section3">
+      <!-- CONTENEDOR DE LAS BASES DE DATOS -->
+      <div class="container-fluid">
+          <div class="main">
+
+              <!-- CATEGORIAS -->
+              <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#todas">Todas</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#recursos_suscritos">Recursos suscritos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#recursos_libres">Recursos libres</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" data-toggle="tab">Link 1</a>
+                        <a class="dropdown-item" href="#recursos_prueba" data-toggle="tab">Recursos en prueba</a>
+                        <a class="dropdown-item" href="#" data-toggle="tab">Link 3</a>
+                      </div>
+                  </li>
+
+                  <li class="nav-item direction">
+                      <a class="nav-link" id="button-az">
+                        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item" data-placement="top" data-toggle="tooltip" title="Orden de Configuración">
+                      <a class="nav-link" id="button-sort">
+                        <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+                      </a>
+                  </li>
+              </ul>
+
+              <!-- PANELES -->
+              <div id="tabs-container" class="tab-content container-fluid">
+              
+                  <div id="todas" class="row tab-pane active"><br>
+
+                  </div>
+
+                  <div id="recursos_suscritos" class="row tab-pane fade"><br>
+
+                  </div>
+
+                  <div id="recursos_libres" class="row tab-pane fade"><br>
+
+                  </div>
+
+                  <div id="recursos_prueba" class="row tab-pane fade"><br>
+
+                  </div>
+
+              </div>
+
+             
+              <div class="row no-gutters" id="dbsTable">
+                  <!-- INICIO DE BASES DE DATOS -->
+                  ^B
+                      <script>
+                      // Retrieve title and normalize it
+                      var title = '^T';
+                      var ezp_url = '^L?url=^V';
+                      fetchDataBase(title, ezp_url);
+                      </script>
+                  ^E
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <a href="/logout" class="float">
+      <i class="fa fa-power-off logout"></i>
+  </a>
+
+</body>
+</html>
